@@ -1,2 +1,2 @@
 # Turbo Mode
- Script made to repeatedly press a button for you.
+ Script made to repeatedly press a button for you. This is also known as the "turbo mode" feature found in custom controllers or arcade sticks. It is generally used so that you do not wear down your controller too quickly by rapidly pressing down on the buttons. To activate the script, press the select button twice quickly. Then press the button you want turbo mode to be on for twice. This script also has a hold button feature that can be toggled between by hitting down on the d-pad twice.
