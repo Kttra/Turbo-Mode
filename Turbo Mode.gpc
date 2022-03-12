@@ -1,0 +1,260 @@
+#pragma METAINFO("Turbo Mode", 4, 50, "Kttra")
+#include <xb1.gph>
+#include "light_k.gph"
+#include <remapper.gph>
+/*	
+-------------------------------------------------------------------------------
+	Created 2/3/19
+	
+	To activate this script press the share button.
+
+	This Script is used to auto activate spamming of a button/holding down.
+	To activate, press any button two times quickly, this script will
+	make it so the controller will activate the desired effect.
+	To deactivate, it's the same method, press the button once.
+
+	Press down on the d-pad to switch between spam and hold mode. The led will
+	change based on the mode.
+	
+	Red = turbo mode
+	Orange = hold mode
+	Blue = off
+
+	An example is if you are in turbo move and press the button 'a' once,
+	the script will simulate the user spamming a. If you
+	are in hold mode and do the same thing, the script will make it so the
+	'a' button is held down.
+
+	This script's intended use is to prevent a controller from getting worn
+	down too much in game segments where the user is required to spam a
+	button. It is also intended to use for idle farming for games that
+	requires the user to spam a button or to do tidious tasks such as holding
+	down rb to lockpick.
+
+	This code is has finally reached the point where I am satisfied.
+
+    I will be using xbox one's control scheme.
+    #define XB1_GUIDE       BUTTON_1
+    #define XB1_VIEW        BUTTON_2
+    #define XB1_MENU        BUTTON_3
+    #define XB1_RB          BUTTON_4
+    #define XB1_RT          BUTTON_5
+    #define XB1_RS          BUTTON_6
+    #define XB1_LB          BUTTON_7
+    #define XB1_LT          BUTTON_8
+    #define XB1_LS          BUTTON_9
+    #define XB1_UP          BUTTON_10
+    #define XB1_DOWN        BUTTON_11
+    #define XB1_LEFT        BUTTON_12
+    #define XB1_RIGHT       BUTTON_13
+    #define XB1_Y           BUTTON_14
+    #define XB1_B           BUTTON_15
+    #define XB1_A           BUTTON_16
+    #define XB1_X           BUTTON_17
+    #define XB1_P1          BUTTON_18
+    #define XB1_P2          BUTTON_19
+    #define XB1_P3          BUTTON_20
+    #define XB1_P4          BUTTON_21
+	
+	#include "light_k.gph"
+	 set_light('W');
+	 set_light('B');
+	 set_light('R');
+	 set_light('Y');
+	 set_light('G');
+	 set_light('W');
+	 set_light('N');
+	
+-------------------------------------------------------------------------------
+	Update 3/14/2020
+		Going off of spam/hold mode now resets the inputs that were entered 
+		during the active mode
+		A.K.A. when you press select 2 times, it turns off the turbo mode &
+		resets that active buttons
+		Also fixed lighting color issues
+		
+-------------------------------------------------------------------------------		
+
+	Update 8/12/2020
+		Changed activation button to be L3
+		Changed spam buttons to be 30 milliseconds instead of 100
+		
+-------------------------------------------------------------------------------
+
+	Update 10/8/2021
+		Changed activation button to be R3
+		May consider changing it to the share button on further research
+		
+-------------------------------------------------------------------------------		
+
+	Update 3/11/2022
+		Changed activation button to be the Share button (BUTTON_18)
+		Changed activation to be one button press
+		
+*/
+
+//Program starts in turbo mode
+bool spam = TRUE;
+bool doNothing = TRUE;
+
+main{
+	//Initializing combos
+	bool spamA;
+	bool spamB;
+	bool spamX;
+	bool spamY;
+	bool spamLB;
+	bool spamLT;
+	bool spamRB;
+	bool spamRT;
+	
+	//Use the share button to activate
+	if(event_active(BUTTON_18)){
+		doNothing = !doNothing;
+	}
+	if(doNothing){
+		set_light('B');
+		spamA = 0;
+		spamB = 0;
+		spamX = 0;
+		spamY = 0;
+		spamLB = 0;
+		spamLT = 0;
+		spamRB = 0;
+		spamRT = 0;
+	}
+	else{
+		//Red = spam mode, Orange = hold mode
+		if(spam){
+			set_light('R');
+		}
+		else{
+			set_light('Y');
+		}
+		//Switch between spam mode and hold mode by pressing down on the d-pad
+		if(event_active(XB1_DOWN) && time_release(XB1_DOWN) < 250){
+			spam = !spam;
+			if(spam){
+				set_light('R');
+			}
+			else{
+				set_light('Y');
+			}
+		}
+		
+		//A
+		(event_active(XB1_A)) ? spamA = !spamA : (spamA = spamA);
+		if(spamA && spam) spam_A = 1; else if(spamA && !spam) hold_A = 1;
+
+		//B
+		(event_active(XB1_B)) ? spamB = !spamB : (spamB = spamB);
+		if(spamB && spam) spam_B = 1; else if(spamB && !spam) hold_B = 1;
+
+		//X
+		(event_active(XB1_X)) ? spamX = !spamX : (spamX = spamX);
+		if(spamX && spam) spam_X = 1; else if(spamX && !spam) hold_X = 1;
+
+		//Y
+		(event_active(XB1_Y)) ? spamY = !spamY : (spamY = spamY);
+		if(spamY && spam) spam_Y = 1; else if(spamY && !spam) hold_Y = 1;
+
+		//LB
+		(event_active(XB1_LB)) ? spamLB = !spamLB : (spamLB = spamLB);
+		if(spamLB && spam) spam_LB = 1; else if(spamLB && !spam) hold_LB = 1;
+		
+		//LT
+		(event_active(XB1_LT)) ? spamLT = !spamLT : (spamLT = spamLT);
+		if(spamLT && spam) spam_LT = 1; else if(spamLT && !spam) hold_LT = 1;
+		
+		//RB
+		(event_active(XB1_RB)) ? spamRB = !spamRB : (spamRB = spamRB);
+		if(spamRB && spam) spam_RB = 1; else if(spamRB && !spam) hold_RB = 1;
+		
+		//RT
+		(event_active(XB1_RT)) ? spamRT = !spamRT : (spamRT = spamRT);
+		if(spamRT && spam) spam_RT = 1; else if(spamRT && !spam) hold_RT = 1;
+	}
+	
+	set_val(BUTTON_18, 0);
+}
+
+//The hold and spam combos
+combo hold_RB{
+	set_val(XB1_RB, 100);
+}
+
+combo spam_RB{
+	set_val(XB1_RB, 100);
+	wait(30); //held for 30ms.
+	wait(30); //released, and combo will repeat in 30ms.
+}
+
+combo hold_RT{
+	set_val(XB1_RT, 100);
+}
+
+combo spam_RT{
+	set_val(XB1_RT, 100);
+	wait(30); //held for 30ms.
+	wait(30); //released, and combo will repeat in 30ms.
+}
+
+combo hold_LT{
+	set_val(XB1_LT, 100);
+}
+
+combo spam_LT{
+	set_val(XB1_LT, 100);
+	wait(30); //held for 30ms.
+	wait(30); //released, and combo will repeat in 30ms.
+}
+
+combo hold_LB{
+	set_val(XB1_LB, 100);
+}
+
+combo spam_LB{
+	set_val(XB1_LB, 100);
+	wait(30); //held for 30ms.
+	wait(30); //released, and combo will repeat in 30ms.
+}
+
+combo hold_Y{
+	set_val(XB1_Y, 100);
+}
+
+combo spam_Y{
+    set_val(XB1_Y, 100);
+	wait(30); //held for 30ms.
+	wait(30); //released, and combo will repeat in 30ms.
+}
+
+combo hold_X{
+	set_val(XB1_X, 100);
+}
+
+combo spam_X{
+    set_val(XB1_X, 100);
+	wait(30); //held for 30ms.
+	wait(30); //released, and combo will repeat in 30ms.
+}
+
+combo hold_A{
+	set_val(XB1_A, 100);
+}
+
+combo spam_A{
+    set_val(XB1_A, 100);
+	wait(30); //held for 30ms.
+	wait(30); //released, and combo will repeat in 30ms.
+}
+
+combo hold_B{
+	set_val(XB1_B, 100);
+}
+
+combo spam_B{
+    set_val(XB1_B, 100);
+	wait(30); //held for 30ms.
+	wait(30); //released, and combo will repeat in 30ms.
+}
