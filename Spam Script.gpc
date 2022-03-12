@@ -1,4 +1,4 @@
-#pragma METAINFO("Spam Script", 3, 50, "K")
+#pragma METAINFO("Spam Script", 3, 50, "Kttra")
 #include <xb1.gph>
 #include "light_k.gph"
 #include <remapper.gph>
@@ -77,9 +77,9 @@
 		
 -------------------------------------------------------------------------------		
 
-	Update 10/13/2021
-		Changed activation button to be the Share button (BUTTON_18)
-		Changed activation to be one button press
+	Update 10/8/2021
+		Changed activation button to be R3
+		May consider changing it to the share button on further research
 
 -------------------------------------------------------------------------------		
 
@@ -125,7 +125,7 @@ main{
 		else{
 			set_light('Y');
 		}
-	//Switch between spam mode and hold mode by pressing up on the d-pad
+	//Switch between spam mode and hold mode by pressing down on the d-pad
 	if(event_active(XB1_DOWN) && time_release(XB1_DOWN) < 250){
 		spam = !spam;
 		if(spam){
