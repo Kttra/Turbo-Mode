@@ -1,5 +1,5 @@
 # Turbo Mode
-Script made to repeatedly press a button for you. This is also known as the "turbo mode" feature found in custom controllers or arcade sticks. It is generally used so that you do not wear down your controller too quickly by rapidly pressing down on the buttons. There are two versions of this script. The difference are as follows:
+A gpc script made to repeatedly press a controller button for you. This is also known as the "turbo mode" feature found in custom controllers or arcade sticks. It is generally used so that you do not wear down your controller too quickly by rapidly pressing down on the buttons. There are two versions of this script. The difference are as follows:
 
 **Version 3.5 (For older gen controllers without a share button)**
 
