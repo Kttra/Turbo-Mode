@@ -9,9 +9,9 @@
 	To activate this script press the share button.
 
 	This Script is used to auto activate spamming of a button/holding down.
-	To activate, press any button two times quickly, this script will
+	To activate, press any button once while active. This script will
 	make it so the controller will activate the desired effect.
-	To deactivate, it's the same method, press the button once.
+	To deactivate, it's the same method, press the button once again.
 
 	Press down on the d-pad to switch between spam and hold mode. The led will
 	change based on the mode.
@@ -21,8 +21,8 @@
 	Blue = off
 
 	An example is if you are in turbo move and press the button 'a' once,
-	the script will simulate the user spamming a. If you
-	are in hold mode and do the same thing, the script will make it so the
+	the script will simulate the user spamming a. Press it again and it'll stop.
+	If you are in hold mode and do the same thing, the script will make it so the
 	'a' button is held down.
 
 	This script's intended use is to prevent a controller from getting worn
