@@ -10,4 +10,4 @@ script also has a hold button feature that can be toggled between by hitting dow
 ----------------------------------------------------------------------------------------------------------------------------
 To activate, press the share button. I have made it so the share button will not screenshot or take a video. After activating, the TitanTwo will glow red. This means turbo mode is on. You can now press on any button to activate turbo mode besides the buttons on the d-pad. Pressing down twice on the d-pad will activate hold mode instead (TitanTwo will glow orange). Pressing the share button again will deactivate the script (TitanTwo will glow blue now). This script will be labeled turbo mode.
 
-![Farmers Market Finder Demo](https://github.com/Kttra/TurboMode/blob/sub/turbo%20mode.gif)
+![turbo mode](https://user-images.githubusercontent.com/100814612/158450420-903d6465-6253-4b7f-be87-91da8ad8cc33.gif)
