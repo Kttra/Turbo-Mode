@@ -10,4 +10,8 @@ script also has a hold button feature that can be toggled between by hitting dow
 ----------------------------------------------------------------------------------------------------------------------------
 To activate, press the share button. I have made it so the share button will not screenshot or take a video. After activating, the TitanTwo will glow red. This means turbo mode is on. You can now press on any button to activate turbo mode besides the buttons on the d-pad. Pressing down twice on the d-pad will activate hold mode instead (TitanTwo will glow orange). Pressing the share button again will deactivate the script (TitanTwo will glow blue now). This script will be labeled turbo mode.
 
+**Turbo Mode in Action**
+----------------------------------------------------------------------------------------------------------------------------
+In the gif below, the script it started by pressing the share button. Notice that on the output side, share it not outputted as to prevent accidental screenshots. Then the "a" button is pressed and on the output it is repeatedly pressed down on without user input. Finally "a" is pressed again to disable the outputs. This is repeated with the "x" button. Then the rest of the supported buttons are shown. Pressing share button again disables and resets the script.
+
 ![turbo mode](https://user-images.githubusercontent.com/100814612/158450420-903d6465-6253-4b7f-be87-91da8ad8cc33.gif)
