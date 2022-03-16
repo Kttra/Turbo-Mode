@@ -12,6 +12,7 @@ To activate, press the share button. I have made it so the share button will not
 
 **Turbo Mode in Action**
 ----------------------------------------------------------------------------------------------------------------------------
-In the gif below, the script it started by pressing the share button. Notice that on the output side, share is not outputted as to prevent accidental screenshots. Then when "a" button is pressed, the output side repeatedly shows "a" being quickly tapped down on without user input. Finally "a" is pressed again to stop the output. This is repeated with the "x" button. Then the rest of the supported buttons are shown. Pressing share button again disables and resets the script.
+In the video below, the script it started by pressing the share button. Notice that on the output side, share is not outputted as to prevent accidental screenshots. Then when "a" button is pressed, the output side repeatedly shows "a" being quickly tapped down on without user input. Finally "a" is pressed again to stop the output. This is repeated with the "x" button. Then the rest of the supported buttons are shown. Pressing share button again disables and resets the script.
 
-![turbo mode](https://user-images.githubusercontent.com/100814612/158450420-903d6465-6253-4b7f-be87-91da8ad8cc33.gif)
+https://user-images.githubusercontent.com/100814612/158521426-1a07c93b-688c-469a-9e53-da27c5843b21.mp4
+
