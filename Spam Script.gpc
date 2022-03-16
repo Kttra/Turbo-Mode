@@ -6,7 +6,7 @@
 -------------------------------------------------------------------------------
 	Created 2/3/19
 	
-	To activate this script press the share button.
+	To activate this script press select twice.
 
 	This Script is used to auto activate spamming of a button/holding down.
 	To activate, press any button two times quickly, this script will
@@ -26,8 +26,6 @@
 	button. It is also intended to use for idle farming for games that
 	requires the user to spam a button or to do tidious tasks such as holding
 	down rb to lockpick.
-
-	This code is not optimized due to lack of experience.
 
     I will be using xbox one's control scheme.
     #define XB1_GUIDE       BUTTON_1
