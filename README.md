@@ -16,3 +16,10 @@ In the video below, the script it started by pressing the share button. Notice t
 
 https://user-images.githubusercontent.com/100814612/158521426-1a07c93b-688c-469a-9e53-da27c5843b21.mp4
 
+**Other Related Projects**
+----------------------------------------------------------------------------------------------------------------------------
+[Macro Runner](https://github.com/Kttra/MacroRunner) - Run custom recorded macros on different gaming consoles and computers.
+
+[Keyboard Remapper](https://github.com/Kttra/PPD-Keyboard-Remapper) - A project that looks into the keyboard rollover problem that plagues many laptops and keyboards and provides a solution.
+
+[Stick Drift Fix](https://github.com/Kttra/Stick-Drift-Fix) - Stick drift is a prevalent problem in all types of controllers ranging from the switch to the playstation. This project prevents the controller from drifting at a software level.
